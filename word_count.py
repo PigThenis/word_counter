@@ -36,8 +36,8 @@ def count_words(words):
 def display_count(word_count):
     print("--- Word Frequency Analysis ---")
     sorted_count = sorted(word_count.items(), key=lambda x: x[1], reverse=True)
-    for word, count in sorted_count[:200]:
-        print(f"{word}: {count}")
+    for i, (word, count) in enumerate(sorted_count[:10], start=1):
+        print(f"{i}. {word}: {count}")
 
 main()
 
